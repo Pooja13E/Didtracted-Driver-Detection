@@ -1,0 +1,7 @@
+{
+    "dropout": 0.5,
+    "lr": 0.0001,
+    "optimizer": "adamw",
+    "dense_units": 512,
+    "weight_decay": 1e-4
+}
