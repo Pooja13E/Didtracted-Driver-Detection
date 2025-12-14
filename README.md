@@ -1,13 +1,12 @@
-# Didtracted-Driver-Detection
-Distracted Driver Detection Using Deep Learning
-Project Overview
+# Didtracted-Driver-Detection-Using-DL
+##Project Overview
 
 Distracted driving is one of the leading causes of road accidents worldwide. This project presents a comprehensive deep learning–based framework to detect distracted driver behaviors using dashboard camera images. We evaluate and compare eight state-of-the-art CNN and object detection models for both classification and real-time detection tasks.
 
 The system aims to support intelligent driver monitoring systems that enhance road safety by identifying unsafe driver behaviors accurately and efficiently.
 
-Models Implemented
-Classification Models
+##Models Implemented
+###Classification Models
 
 EfficientNetV2M
 
@@ -21,13 +20,13 @@ ResNet152V2
 
 NASNetMobile
 
-Object Detection Models
+###Object Detection Models
 
 YOLOv8
 
 YOLOv10
 
-Dataset
+##Dataset
 
 Dataset: State Farm Distracted Driver Detection Dataset
 
@@ -39,24 +38,22 @@ Image Resolution: 640×480
 
 Link: https://www.kaggle.com/datasets/rightway11/state-farm-distracted-driver-detection
 
-Driver Behavior Classes
+###Driver Behavior Classes
 
-c0: Safe driving
+●	c0: Safe driving
+●	c1: Texting using right hand
+●	c2: Talking on the phone using right hand
+●	c3: Texting using left hand
+●	c4: Talking on the phone using left hand
+●	c5: Operating the radio
+●	c6: Drinking
+●	c7: Reaching behind 
+●	c8: Hair and makeup 
+●	c9: Talking to a passenger
 
-c1–c4: Texting / phone usage (left & right hand)
 
-c5: Operating the radio
-
-c6: Drinking
-
-c7: Reaching behind
-
-c8: Hair & makeup
-
-c9: Talking to passenger
-
-Methodology
-Preprocessing
+##Methodology
+###Preprocessing
 
 Corrupted image removal using PIL
 
@@ -66,7 +63,7 @@ Driver-wise group-stratified train/validation split
 
 Model-specific resizing and ImageNet normalization
 
-Data Augmentation
+###Data Augmentation
 
 Horizontal flips
 
@@ -76,7 +73,7 @@ Zoom & translation
 
 Brightness and contrast adjustments
 
-Training Strategy
+###Training Strategy
 
 Transfer learning with ImageNet-pretrained weights
 
@@ -86,7 +83,7 @@ Early stopping & learning rate scheduling
 
 Categorical cross-entropy loss
 
-YOLO Pipeline (Object Detection)
+###YOLO Pipeline (Object Detection)
 
 Manual annotation of a starter dataset using Roboflow
 
@@ -98,22 +95,22 @@ High-confidence label filtering
 
 Final driver-wise split and fine-tuning
 
-Comparison between YOLOv8 and YOLOv10
 
-Results
-Classification Performance
-Model	Accuracy
-EfficientNetV2M	87.67%
-Xception	82.87%
-VGG19	82.22%
-InceptionV3	80.80%
-ResNet152V2	77.24%
-NASNetMobile	58.79%
-Object Detection Performance
-Model	mAP50	mAP50-95
-YOLOv8	0.89	0.76
-YOLOv10	0.89	0.75
-Key Findings
+##Results
+###Classification Performance
+*Model*	         *Accuracy*
+EfficientNetV2M	 87.67%
+Xception	       82.87%
+VGG19	           82.22%
+InceptionV3	     80.80%
+ResNet152V2	     77.24%
+NASNetMobile	   58.79%
+###Object Detection Performance
+*Model* *mAP50*	*mAP50-95*
+YOLOv8	 0.89	    0.76
+YOLOv10	 0.89	    0.75
+
+##Key Findings
 
 EfficientNetV2M achieved the best overall classification performance
 
@@ -123,7 +120,7 @@ Driver-wise splitting ensured fair and leakage-free evaluation
 
 YOLO models are more suitable for real-time deployment
 
-Future Work
+##Future Work
 
 Extend to video-based driver monitoring
 
@@ -135,10 +132,8 @@ Add night-time and multi-angle data
 
 Incorporate Explainable AI (Grad-CAM) for interpretability
 
-Team Members
+##Team Members
 
-Sowjanya R (23BIT0310)
-
-Vishnupriya S (23BIT041)
-
-Pooja E (23BIT0351)
+Sowjanya R 
+Vishnupriya S 
+Pooja E 
